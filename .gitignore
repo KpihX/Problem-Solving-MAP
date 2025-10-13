@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+.venv/
+venv/
+ENV/
+.venv*/
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# VS Code / IDEs
+.vscode/
+.vscode-*
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Images and figures anywhere
+images/
+**/images/
+**/figures/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+
+# Data/cache/temp
+*.csv
+*.tsv
+*.dat
+*.npy
+*.npz
+*.mat
+*.h5
+*.pickle
+*.zip
+*.gz
+*.bz2
+*.xz
+*.7z
+*.tar
+
+# Logs
+*.log
+logs/
+
+# Notebook outputs (optional patterns)
+**/*.out.png
+**/*.out.jpg
+**/*.out.svg

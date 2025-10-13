@@ -1,0 +1,7 @@
+# Dépendances minimales communes aux notebooks
+jupyter
+numpy
+scipy
+matplotlib
+seaborn
+scikit-image

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ipynb-smart-exporter</title>
+	
+	<!-- MathJax 3 for LaTeX rendering -->
+	<script>
+		MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']],
+				displayMath: [['$$', '$$'], ['\\[', '\\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				packages: {'[+]': ['ams', 'newcommand', 'configmacros']}
+			},
+			options: {
+				ignoreHtmlClass: 'tex2jax_ignore',
+				processHtmlClass: 'tex2jax_process'
+			},
+			svg: {
+				fontCache: 'global',
+				scale: 1.1
+			}
+		};
+	</script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+	
+	{{ head_css | safe }}
+</head>
+<body{{ body_class | safe }}>
+	<div class="nb-container">
+		{{ body | safe }}
+	</div>
+</body>
+</html>

@@ -1,0 +1,343 @@
+/* ============================================================
+   PREMIUM TYPOGRAPHY & MATH RENDERING
+   Enhanced styles for academic/scientific notebooks
+   ============================================================ */
+
+/* === PROFESSIONAL TYPOGRAPHY === */
+body {
+	font-family: var(--text-font-family, "Charter", "Georgia", "Cambria", "Times New Roman", serif) !important;
+	line-height: var(--text-line-height, 1.6) !important;
+	font-size: var(--text-font-size, 11pt) !important;
+	color: #1a1a1a;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* === BEAUTIFUL HEADINGS === */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Lato", "Helvetica Neue", "Arial", sans-serif;
+	font-weight: 600;
+	color: #2c3e50;
+	page-break-after: avoid;
+	page-break-inside: avoid;
+	letter-spacing: -0.02em;
+	line-height: 1.3;
+}
+
+h1 {
+	font-size: 2.2em;
+	margin: 1.5em 0 0.8em 0;
+	padding-bottom: 0.3em;
+	border-bottom: 3px solid #3498db;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 1.8em;
+	margin: 1.3em 0 0.7em 0;
+	padding-bottom: 0.25em;
+	border-bottom: 2px solid #95a5a6;
+	color: #34495e;
+}
+
+h3 {
+	font-size: 1.5em;
+	margin: 1.2em 0 0.6em 0;
+	color: #2c3e50;
+}
+
+h4 {
+	font-size: 1.3em;
+	margin: 1em 0 0.5em 0;
+	color: #34495e;
+	font-weight: 600;
+}
+
+h5 {
+	font-size: 1.15em;
+	margin: 0.9em 0 0.4em 0;
+	color: #555;
+	font-weight: 600;
+}
+
+h6 {
+	font-size: 1.05em;
+	margin: 0.8em 0 0.4em 0;
+	color: #666;
+	font-weight: 600;
+	font-style: italic;
+}
+
+/* === PREMIUM MATH RENDERING === */
+
+/* Inline math - seamless with text */
+.MathJax,
+mjx-container[jax="SVG"][display="false"] {
+	display: inline-block !important;
+	margin: 0 0.15em !important;
+	vertical-align: middle;
+	font-size: 1.05em;
+}
+
+/* Display math - centered, prominent */
+.MathJax_Display,
+mjx-container[jax="SVG"][display="true"] {
+	display: block !important;
+	text-align: center !important;
+	margin: 1.2em 0 !important;
+	padding: 0.8em 0;
+	overflow-x: auto;
+	overflow-y: hidden;
+	page-break-inside: avoid;
+	background: #fafbfc;
+	border-left: 4px solid #3498db;
+	border-radius: 4px;
+}
+
+/* Math in paragraphs */
+p .MathJax,
+p mjx-container {
+	margin: 0 0.1em;
+}
+
+/* Enhanced equation numbering */
+.MathJax_Display .mjx-mrow {
+	display: inline-block;
+}
+
+/* Math font quality */
+mjx-math {
+	font-family: "Latin Modern Math", "STIX Two Math", "Cambria Math", serif !important;
+	font-size: 1.1em;
+}
+
+/* === CODE BLOCKS === */
+div.input_area pre,
+.jp-InputArea pre {
+	font-family: var(--code-font-family, "Fira Code", "JetBrains Mono", "Consolas", "Monaco", monospace) !important;
+	font-size: var(--code-font-size, 10pt) !important;
+	line-height: 1.5;
+	background: #f8f9fa;
+	border: 1px solid #dee2e6;
+	border-left: 4px solid #28a745;
+	border-radius: 6px;
+	padding: 1em;
+	overflow-x: auto;
+	page-break-inside: auto;
+}
+
+/* Code output */
+div.output_area pre,
+.jp-OutputArea-output pre {
+	font-family: var(--code-font-family, "Fira Code", "JetBrains Mono", "Consolas", monospace) !important;
+	font-size: var(--code-font-size, 9.5pt) !important;
+	line-height: 1.5;
+	background: #ffffff;
+	border: 1px solid #e9ecef;
+	border-left: 4px solid #6c757d;
+	border-radius: 6px;
+	padding: 1em;
+	color: #212529;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+/* === FIGURES & IMAGES === */
+div.output_subarea img,
+.jp-RenderedImage img,
+.jp-OutputArea-output img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 1.5em auto;
+	border: 1px solid #dee2e6;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	page-break-inside: avoid;
+	page-break-before: auto;
+	page-break-after: auto;
+}
+
+/* Image captions */
+.jp-RenderedImage figcaption {
+	text-align: center;
+	font-style: italic;
+	color: #6c757d;
+	font-size: 0.95em;
+	margin-top: 0.5em;
+}
+
+/* === LISTS === */
+ol, ul {
+	margin: 1em 0;
+	padding-left: 2.5em;
+	line-height: 1.7;
+}
+
+li {
+	margin: 0.5em 0;
+}
+
+li > p {
+	margin: 0.3em 0;
+}
+
+/* Nested lists */
+ol ol, ol ul, ul ol, ul ul {
+	margin: 0.3em 0;
+}
+
+/* === TABLES === */
+table {
+	border-collapse: collapse;
+	margin: 1.5em auto;
+	width: auto;
+	max-width: 100%;
+	font-size: 0.95em;
+	page-break-inside: avoid;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+thead {
+	background: linear-gradient(to bottom, #34495e, #2c3e50);
+	color: white;
+	font-weight: 600;
+}
+
+th {
+	padding: 0.8em 1em;
+	text-align: left;
+	border: none;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+td {
+	padding: 0.7em 1em;
+	border-bottom: 1px solid #e9ecef;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+	background-color: #e3f2fd;
+	transition: background-color 0.2s ease;
+}
+
+/* === BLOCKQUOTES === */
+blockquote {
+	margin: 1.5em 0;
+	padding: 0.8em 1.5em;
+	border-left: 5px solid #3498db;
+	background: #ecf0f1;
+	font-style: italic;
+	color: #34495e;
+	page-break-inside: avoid;
+}
+
+blockquote p {
+	margin: 0.5em 0;
+}
+
+/* === HORIZONTAL RULES === */
+hr {
+	border: none;
+	height: 2px;
+	background: linear-gradient(to right, transparent, #95a5a6, transparent);
+	margin: 2em 0;
+}
+
+/* === LINKS === */
+a {
+	color: #3498db;
+	text-decoration: none;
+	border-bottom: 1px dotted #3498db;
+}
+
+a:hover {
+	color: #2980b9;
+	border-bottom: 1px solid #2980b9;
+}
+
+/* === EMPHASIS === */
+strong, b {
+	font-weight: 700;
+	color: #2c3e50;
+}
+
+em, i {
+	font-style: italic;
+	color: #34495e;
+}
+
+code {
+	font-family: "Fira Code", "Consolas", monospace;
+	font-size: 0.92em;
+	background: #f1f3f5;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	color: #c7254e;
+	border: 1px solid #e9ecef;
+}
+
+/* === SPECIAL ELEMENTS === */
+
+/* Footnotes */
+.footnote {
+	font-size: 0.9em;
+	color: #6c757d;
+	vertical-align: super;
+}
+
+/* References */
+.citation {
+	color: #3498db;
+	font-weight: 600;
+}
+
+/* === PAGE BREAKS === */
+.page-break {
+	page-break-after: always;
+}
+
+/* Avoid breaking after headings */
+h1, h2, h3, h4, h5, h6 {
+	page-break-after: avoid;
+}
+
+/* Keep figures with captions */
+figure {
+	page-break-inside: avoid;
+}
+
+/* === PRINT OPTIMIZATIONS === */
+@media print {
+	body {
+		font-size: var(--text-font-size, 10pt) !important;
+		line-height: var(--text-line-height, 1.5) !important;
+	}
+	
+	h1 { font-size: 1.8em; }
+	h2 { font-size: 1.5em; }
+	h3 { font-size: 1.3em; }
+	
+	a {
+		color: #000;
+		text-decoration: underline;
+	}
+	
+	/* Show URLs for links */
+	a[href^="http"]:after {
+		content: " (" attr(href) ")";
+		font-size: 0.8em;
+		color: #666;
+	}
+	
+	/* Optimize for black and white printing */
+	img {
+		filter: none;
+	}
+}

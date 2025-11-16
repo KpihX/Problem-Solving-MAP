@@ -1,0 +1,67 @@
+/* Masquage des compteurs In[*] / Out[*] (JupyterLab/nbconvert markup) */
+/* Ancien markup (notebook classique) */
+.hide-execution-count .prompt { display: none !important; }
+/* JupyterLab markup */
+body.hide-execution-count { --jp-cell-prompt-width: 0px; }
+.hide-execution-count .jp-InputPrompt,
+.hide-execution-count .jp-OutputPrompt,
+.hide-execution-count .jp-OutputArea-promptOverlay { display: none !important; }
+
+div.input_area {
+	background: #fbfbfb;
+	border-left: 3px solid #e0e0e0;
+	padding-left: 0.6em;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+div.input_area pre {
+	white-space: pre-wrap !important;
+	word-wrap: break-word !important;
+	word-break: break-all !important;
+	overflow-wrap: break-word !important;
+	max-width: 100%;
+}
+
+/* Style for code omission separator */
+.code-omission-separator {
+	display: block !important;
+	background: linear-gradient(to right, #fff3cd 0%, #fffbea 50%, #fff3cd 100%) !important;
+	color: #856404 !important;
+	font-weight: 700 !important;
+	padding: 0.5em 1em !important;
+	border-radius: 4px !important;
+	text-align: center !important;
+	border-top: 2px dashed #ffc107 !important;
+	border-bottom: 2px dashed #ffc107 !important;
+	margin: 0.8em -0.6em !important;
+	font-family: monospace !important;
+	letter-spacing: 0.08em !important;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+div.input_area.hidden > pre {
+	display: none;
+}
+
+div.input_area.hidden::before {
+	content: "Code hidden (see outputs).";
+	display: block;
+	color: #666;
+	font-style: italic;
+	margin-bottom: 0.4em;
+	font-size: 9pt;
+}
+
+/* Style pour code partiellement affiché */
+div.input_area.partial > pre::before {
+	content: "⋮ [" attr(data-lines-omitted) " lines omitted] ⋮";
+	display: block;
+	color: #999;
+	font-style: italic;
+	text-align: center;
+	margin: 0.5em 0;
+	padding: 0.3em;
+	background: #f5f5f5;
+	border-radius: 4px;
+}

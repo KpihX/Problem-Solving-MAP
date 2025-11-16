@@ -1,0 +1,161 @@
+/* Base layout */
+body {
+	font-family: var(--text-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif) !important;
+	margin: 0;
+	line-height: var(--text-line-height, 1.6) !important;
+	font-size: var(--text-font-size, 11pt) !important;
+	color: #111;
+}
+
+@page {
+	margin-top: var(--pdf-margin-top, 2cm);
+	margin-right: var(--pdf-margin-right, 2cm);
+	margin-bottom: var(--pdf-margin-bottom, 2cm);
+	margin-left: var(--pdf-margin-left, 2cm);
+}
+
+.nb-container {
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	page-break-after: avoid;
+	page-break-inside: avoid;
+	margin-top: 1.5em;
+	margin-bottom: 0.8em;
+}
+
+div.output_area pre,
+div.input_area pre {
+	white-space: pre-wrap;
+	word-break: break-word;
+	font-family: var(--code-font-family, "Menlo", "Consolas", "DejaVu Sans Mono", monospace) !important;
+	font-size: var(--code-font-size, 9pt) !important;
+	margin: 0.4em 0;
+	padding: 0.6em;
+	border-radius: 6px;
+	background: #fcfcfc;
+	border: 1px solid #f0f0f0;
+	page-break-inside: auto;
+}
+
+/* Output areas */
+.jp-OutputArea,
+.jp-OutputArea-child,
+div.output_area {
+	page-break-inside: avoid;
+	margin: 0.5em 0;
+}
+
+/* Text outputs */
+.jp-OutputArea-output pre,
+div.output_text pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-size: 9pt;
+	line-height: 1.4;
+}
+
+div.output_subarea img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0.5em auto;
+	page-break-inside: avoid;
+}
+
+/* Matplotlib figures */
+.jp-RenderedImage,
+.jp-OutputArea-output img {
+	max-width: 100%;
+	height: auto;
+	page-break-inside: avoid;
+	page-break-before: auto;
+	page-break-after: auto;
+}
+
+/* Preserve figure quality */
+img {
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
+}
+
+.code-long-lines pre {
+	white-space: pre;
+	overflow-x: auto;
+}
+
+.hidden-code-note {
+	font-style: italic;
+	font-size: 9pt;
+	color: #666;
+}
+
+/* Lists rendering */
+ol, ul {
+	margin: 0.8em 0;
+	padding-left: 2em;
+	page-break-inside: auto; /* Allow lists to break across pages */
+}
+
+li {
+	margin: 0.4em 0;
+	line-height: 1.6;
+	page-break-inside: avoid; /* Keep individual list items together */
+	orphans: 2; /* Minimum 2 lines at bottom of page */
+	widows: 2; /* Minimum 2 lines at top of next page */
+}
+
+/* LaTeX/MathJax rendering */
+.MathJax,
+.MathJax_Display,
+.MathJax_SVG,
+.MathJax_Preview {
+	overflow-x: auto;
+	overflow-y: hidden;
+	max-width: 100%;
+	page-break-inside: avoid;
+}
+
+/* Display equations ($$...$$) */
+.MathJax_Display {
+	margin: 1em 0;
+	text-align: center;
+}
+
+/* Inline math ($...$) */
+.MathJax {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* LaTeX environments (align, equation, etc.) */
+.jp-RenderedHTMLCommon pre,
+.jp-RenderedMarkdown pre {
+	white-space: pre-wrap;
+	overflow-x: auto;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	margin: 1em 0;
+	page-break-inside: avoid;
+	max-width: 100%;
+}
+
+th, td {
+	border: 1px solid #ddd;
+	padding: 0.5em 0.8em;
+	text-align: left;
+}
+
+th {
+	background: #f5f5f5;
+	font-weight: 600;
+}

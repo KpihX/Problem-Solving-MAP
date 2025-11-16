@@ -1,0 +1,96 @@
+# ============================================================
+# CONFIGURATION POUR RandomAlgorithms.ipynb
+# Notebook complexe avec LaTeX, figures et plots matplotlib
+# ============================================================
+
+# === MASQUAGE DU CODE ===
+# Ne pas masquer le code : ce notebook est didactique
+hide_code_by_default: false
+remove_cells_with_tag: ['hide_cell']
+hide_code_with_tag: ['hide_code']
+hide_output_with_tag: ['hide_output']  # Masquer sorties même si code visible
+show_outputs_with_tag: []
+hide_import_only_cells: true
+hide_leading_imports: true  # Masquer les imports au début des cellules de code
+page_break_marker: "<!-- PAGE_BREAK -->"  # Marqueur pour saut de page manuel dans markdown
+
+
+# === MASQUAGE PARTIEL ===
+partial_code_by_default: true
+# partial_code_with_tag: ['partial']
+partial_code_head_lines: 1
+partial_code_tail_lines: 1
+partial_code_separator_text: "# ... [{count} lignes omises] ..."
+
+# === AFFICHAGE DES COMPTEURS In[*] / Out[*] ===
+# Masquer les compteurs pour un rendu propre
+hide_execution_count: true
+
+# === MISE EN PAGE MARKDOWN ===
+# Désactiver le reflow pour préserver la mise en forme exacte du LaTeX
+reflow_markdown: false
+max_line_length: 120
+
+# === DÉTECTION DE LIGNES LONGUES ===
+detect_long_code_lines: true
+long_line_threshold: 120
+hide_import_only_cells: false
+
+# === MARGES PDF ===
+# Marges généreuses pour accommoder les équations LaTeX larges
+pdf_margin_top: 3cm
+pdf_margin_right: 2.5cm
+pdf_margin_bottom: 2cm
+pdf_margin_left: 2.5cm
+
+# === STYLES ET TEMPLATES ===
+css_files:
+  - ../ipynb_smart_exporter/css/base.css
+  - ../ipynb_smart_exporter/css/code_formatting.css
+  - ../ipynb_smart_exporter/css/premium_typography.css
+  - ../ipynb_smart_exporter/css/document_structure.css
+template: ../ipynb_smart_exporter/templates/base_template.html
+
+# === FILTRAGE DES SORTIES ===
+# Masquer les warnings pour un document propre
+hide_warnings: true
+hide_errors: false
+warning_patterns:
+  - "Warning"
+  - "DeprecationWarning"
+  - "FutureWarning"
+  - "UserWarning"
+  - "RuntimeWarning"
+
+# === TABLE DES MATIÈRES ===
+generate_toc: true
+toc_depth: 3
+toc_title: "Table des matières"
+
+# === PAGE DE COUVERTURE ===
+generate_cover: true
+cover_institution: "Ecole Polytechnique, Cycle Ingénieur (2A)"
+cover_subject: "APM_41M01_EP - Problem solving en mathématiques appliquées"
+cover_title: "Algorithmes Randomisés"
+cover_subtitle: "Autour du tri rapide"
+cover_authors:
+  - "KAMDEM POUOKAM Ivann harold"
+cover_date: auto
+cover_quote: "L'aléa n'est pas l'ennemi de la rigueur, mais son complice."
+
+# === NUMÉROTATION ===
+page_numbering: true
+page_number_format: "Page {page} / {total}"
+page_number_position: "bottom-center"
+
+# === NUMÉROTATION SCIENTIFIQUE ===
+figure_numbering: true
+equation_numbering: false  # Déjà numérotées dans le LaTeX
+add_bibliography: false
+
+# === TYPOGRAPHIE ===
+# text_font_family: "'Palatino Linotype', 'Book Antiqua', Palatino, serif"
+text_font_size: 8pt
+# text_line_height: 1.7
+# code_font_family: "'Consolas', 'Monaco', 'Courier New', monospace"
+code_font_size: 8pt

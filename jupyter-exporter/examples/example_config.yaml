@@ -1,0 +1,48 @@
+# ============================================================
+# CONFIGURATION EXPORTEUR INTELLIGENT DE NOTEBOOKS JUPYTER
+# ============================================================
+
+# === MASQUAGE DU CODE ===
+hide_code_by_default: false
+remove_cells_with_tag:
+  - remove
+  - internal
+  - scratch
+hide_code_with_tag:
+  - hide_code
+  - secrets
+show_outputs_with_tag:
+  - show_output
+  - long_line_demo
+partial_code_with_tag:
+  - partial_code
+  - preview_code
+
+# === MASQUAGE PARTIEL (k premières + n dernières lignes) ===
+partial_code_head_lines: 2
+partial_code_tail_lines: 3
+partial_code_separator_text: "# ... [{count} Lignes masquées] ..."
+
+# === AFFICHAGE DES COMPTEURS In[*] / Out[*] ===
+hide_execution_count: true  # true pour masquer les compteurs
+
+# === MISE EN PAGE MARKDOWN ===
+reflow_markdown: true
+max_line_length: 100
+
+# === DÉTECTION DE LIGNES LONGUES ===
+detect_long_code_lines: true
+long_line_threshold: 100
+hide_import_only_cells: true
+
+# === MARGES PDF (personnalisables) ===
+# pdf_margin_top: 1cm
+# pdf_margin_right: 1cm
+# pdf_margin_bottom: 1cm
+# pdf_margin_left: 1cm
+
+# === STYLES ET TEMPLATES ===
+css_files:
+  - ipynb_smart_exporter/css/base.css
+  - ipynb_smart_exporter/css/code_formatting.css
+template: ipynb_smart_exporter/templates/base_template.html

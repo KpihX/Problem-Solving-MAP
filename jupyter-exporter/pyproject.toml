@@ -1,0 +1,29 @@
+ [project]
+ name = "ipynb-smart-exporter"
+ version = "0.1.0"
+ description = "Intelligent IPYNB to HTML/PDF exporter with cell-level preprocessing."
+ authors = [{ name = "KpihX" }]
+ readme = "README.md"
+ license = { text = "MIT" }
+ requires-python = ">=3.9"
+ dependencies = [
+	 "nbformat>=5.9",
+	 "nbconvert>=7.0",
+	 "weasyprint>=58.0",
+	 "pyyaml>=6.0",
+	 "jinja2>=3.1",
+	 "markdown>=3.3"
+ ]
+
+ [project.optional-dependencies]
+ dev = [
+	 "pytest>=7.0",
+	 "pytest-cov>=4.0"
+ ]
+
+ [project.scripts]
+ ipynb2pdf = "ipynb_smart_exporter.cli:main"
+
+ [build-system]
+ requires = ["setuptools>=65", "wheel"]
+ build-backend = "setuptools.build_meta"

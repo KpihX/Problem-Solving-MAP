@@ -388,7 +388,7 @@ class ReferenceManager:
             "\n\n",
             "---\n",
             "\n",
-            "## Références\n",
+            "### Références\n",
             "\n"
         ]
         
